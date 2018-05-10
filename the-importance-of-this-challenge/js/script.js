@@ -12,10 +12,10 @@ $(".stream-nav").on("click", function() {
     $(thisStreamCardsSelector).addClass("card-highlight");
 });
 
-$(".stream-nav").on("click", function(){
+$(".stream-nav").on("click", function() {
     var allStreamsCardsSelector = ".card";
     var thisStreamCardsSelector = "." + this.id + "-card";
-    
+
     $(allStreamsCardsSelector).removeClass("card-highlight");
     $(thisStreamCardsSelector).addClass("card-highlight");
 });
@@ -39,24 +39,26 @@ $(".stream-nav").on("click", function(){
 // });
 
 
-// Challenge 2 Traversing: Return to the cards page: 
-// Give the paragraphs inside the cards a display: none;
-// Use slideDown to display the card paragraphs when the card_image is clicked.
+// // Challenge 2 Traversing: Return to the cards page: 
+// // Give the paragraphs inside the cards a display: none;
+// // Use slideDown to display the card paragraphs when the card_image is clicked.
 
 // $(document).ready(function(){
 //   $("button").prev("p").css("display", "none"); 
-   
+
 //   $(".card_image").on("click", function(){
-//       var hiddenP = $("button").prev("p");
+//       var hiddenP = $(this).next().children("p");
 //       $(hiddenP).slideDown("slow");
 //   });
 // });
 
-$(document).ready(function(){
-   $("button").prev("p").css("display", "none"); 
-   
-  $(".card_image").on("click", function(){
-      var hiddenP = $(this).next().children("p");
-       $(hiddenP).slideDown("slow");
-   });
+
+// Challenge 3 Traversing: When a card is clicked on, the background color is highlighted
+// – e.g., set background-color to pink via adding a new class. 
+// When the card is clicked again, it is unhighlighted
+
+$(document).ready(function() {
+    $(".card").on("click", function() {
+        $(this).toggleClass("card-highlight");
+    });
 });
