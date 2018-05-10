@@ -43,11 +43,20 @@ $(".stream-nav").on("click", function(){
 // Give the paragraphs inside the cards a display: none;
 // Use slideDown to display the card paragraphs when the card_image is clicked.
 
+// $(document).ready(function(){
+//   $("button").prev("p").css("display", "none"); 
+   
+//   $(".card_image").on("click", function(){
+//       var hiddenP = $("button").prev("p");
+//       $(hiddenP).slideDown("slow");
+//   });
+// });
+
 $(document).ready(function(){
    $("button").prev("p").css("display", "none"); 
    
   $(".card_image").on("click", function(){
-      var hiddenP = $("button").prev("p");
+      var hiddenP = $(this).next().children("p");
        $(hiddenP).slideDown("slow");
    });
 });
