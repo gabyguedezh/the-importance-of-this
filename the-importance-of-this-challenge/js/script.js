@@ -20,17 +20,34 @@ $(".stream-nav").on("click", function(){
     $(thisStreamCardsSelector).addClass("card-highlight");
 });
 
-$("p").on("click", function(){
-    var pLink = $(this).children("a");
-    $(pLink).addClass("highlightAnchor");
-});
+// //  Challenge: Add yellow highlights to links 
 
-// Challenge Traversing: Now with this knowledge of traversing the DOM, 
-// we can continue from the previous lesson. Given the following HTML, 
-// what is the relationship between the button and p elements? 
-// Use that relationship to close the p element using .slideToggle(‘slow’)
+// $("p").on("click", function(){
+//     var pLink = $(this).children("a");
+//     $(pLink).addClass("highlightAnchor");
+// });
 
-$("button").on("click", function(){
-    var descritionP = $(this).prev("p");
-    $(descritionP).slideToggle("slow");
+
+// // Challenge 1 Traversing: Now with this knowledge of traversing the DOM, 
+// // we can continue from the previous lesson. Given the following HTML, 
+// // what is the relationship between the button and p elements? 
+// // Use that relationship to close the p element using .slideToggle(‘slow’)
+
+// $("button").on("click", function(){
+//     var descritionP = $(this).prev("p");
+//     $(descritionP).slideToggle("slow");
+// });
+
+
+// Challenge 2 Traversing: Return to the cards page: 
+// Give the paragraphs inside the cards a display: none;
+// Use slideDown to display the card paragraphs when the card_image is clicked.
+
+$(document).ready(function(){
+   $("button").prev("p").css("display", "none"); 
+   
+  $(".card_image").on("click", function(){
+      var hiddenP = $("button").prev("p");
+       $(hiddenP).slideDown("slow");
+   });
 });
