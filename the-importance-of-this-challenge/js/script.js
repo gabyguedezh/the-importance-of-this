@@ -19,3 +19,8 @@ $(".stream-nav").on("click", function(){
     $(allStreamsCardsSelector).removeClass("card-highlight");
     $(thisStreamCardsSelector).addClass("card-highlight");
 });
+
+$("p").on("click", function(){
+    var pLink = $(this).children("a");
+    $(pLink).addClass("highlightAnchor");
+});

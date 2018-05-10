@@ -84,6 +84,12 @@ div{
 
 }
 
+/* CHALLENGES ADD ONS */
+
+.highlightAnchor {
+	background-color: yellow;
+}
+
 /*************************
 Navigation
 **************************/
