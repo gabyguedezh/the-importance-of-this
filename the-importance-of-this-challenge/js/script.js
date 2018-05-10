@@ -100,17 +100,24 @@ $(document).ready(function() {
 //     });
 // });
 
-// Some help from the instructor (advised to use the :not)
+// Some help from the instructor (advised to use the :not). Commented out failed attempts.
 
 $(document).ready(function() {
     $("#select_btn").on("click", function() {
         
-        var panel = $("#select_btn").parent().parent().next();
+        // var panel = $("#select_btn").parent().parent().next();
         
-        if ("panel:not(.card-highlight)"){
-            $(".card").hide();
-        } else {
-            $("panel").show();
-        }
+        // $("panel:not(.card-highlight)").hide();
+        
+        $(".card:not(.card-highlight)").hide();  
+        
+        // if ("panel:not(.card-highlight)"){
+        //     $(".card").hide();
+        // } else {
+        //     $("panel").show();
+        // }
+    });
+    $("#all_btn").on("click", function () {
+       $(".card").show(); 
     });
 });
